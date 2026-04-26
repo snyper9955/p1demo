@@ -259,7 +259,7 @@ export default function Home() {
               {
                 title: "Bridal Glamour",
                 desc: "Timeless and luminous looks tailored for your most precious day. Our comprehensive bridal service includes a detailed trial session to perfect your vision.",
-                icon: <Heart className="text-pink-500" size={48} />,
+                icon: <Heart className="" size={48} />,
               },
               {
                 title: "Editorial & Fashion",
@@ -281,8 +281,8 @@ export default function Home() {
                 key={idx} 
                 className="relative bg-neutral-900 backdrop-blur-md p-12 rounded-[3.5rem] border border-white/30 shadow-sm hover:shadow-2xl hover:bg-neutral-950 transition-all duration-700 group flex flex-col md:flex-row gap-10 items-center md:items-start text-center md:text-left cursor-pointer"
               >
-                <div className="flex-shrink-0 w-28 h-28 bg-primary/10 rounded-[2rem] flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all duration-700">
-                  <div className="group-hover:scale-110 transition-transform duration-700">
+                <div className="flex-shrink-0 w-28 h-28 bg-primary/10 rounded-[2rem] flex items-center justify-center group-hover:bg-pink-500  transition-all duration-700">
+                  <div className="group-hover:scale-110  transition-transform duration-700">
                     {service.icon}
                   </div>
                 </div>
