@@ -46,64 +46,64 @@ export default function Home() {
       <div className="absolute bottom-0 left-0 w-1/4 h-1/4 bg-pink-500/5 rounded-full blur-[100px] -z-10"></div>
 
       {/* HERO SECTION */}
-      <section id="home" className="min-h-screen pt-32 pb-20 flex items-center">
-        <main className="max-w-7xl mx-auto px-6 w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <section id="home" className="h-[100dvh] lg:h-screen md:h-full lg:h-auto lg:min-h-screen pt-16 lg:pt-32 pb-6 lg:pb-20 flex items-center overflow-hidden">
+        <main className="max-w-7xl mx-auto px-6 w-full h-full flex items-center">
+          <div className="flex flex-col lg:grid lg:grid-cols-2 gap-4 lg:gap-16 items-center  w-full">
             {/* Left: Content & Summary */}
-            <div className="flex flex-col space-y-10 order-2 lg:order-1">
+            <div className="flex flex-col  space-y-4 lg:space-y-10 order-2 lg:order-1">
               <div>
                 <p className="uppercase tracking-[0.3em] text-sm font-semibold text-primary mb-4 flex items-center gap-2">
                   <span className="w-8 h-px bg-primary"></span>
                   Makeup Artist Darbhanga
                 </p>
-                <h1 className="text-6xl md:text-8xl font-serif font-bold text-foreground leading-[1.1] mb-6 tracking-tight">
+                <h1 className="text-3xl md:text-6xl lg:text-8xl text-center font-serif font-bold text-foreground leading-[1.1] mb-2 lg:mb-6 tracking-tight">
                   Pooja Kumari
                 </h1>
-                <div className="flex flex-col space-y-4">
-                  <h1 className="text-md md:text-xl font-semibold text-white bg-pink-500/20 border border-pink-500 shadow-xl rounded-2xl px-6 py-3 leading-[1.1] mb-2 tracking-tight w-fit">
-                    Located near Laheria Sarai Station, Darbhanga, Bihar.
+                <div className="flex flex-col justify-center items-center space-y-4">
+                  <h1 className="text-md text-center md:text-lg lg:text-xl font-semibold text-pink-100 bg-pink-950/50 border border-pink-500 shadow-xl rounded-2xl px-4 lg:px-6 py-2 lg:py-3 leading-[1.1] mb-2 tracking-tight w-fit">
+                    Located near Laheria Sarai Station, Darbhanga.
                   </h1>
-                  <h2 className="text-md md:text-xl font-semibold text-primary leading-relaxed max-w-xl">
-                    With over 8 years of dedicated experience, Pooja Kumari has become the premier choice for brides and fashion enthusiasts in Darbhanga.
+                  <h2 className="text-md  md:text-lg lg:text-xl font-semibold text-primary leading-relaxed max-w-xl">
+                    With over 8 years of experience, Pooja Kumari is the premier choice for bridal beauty in Darbhanga.
                   </h2>
                 </div>
               </div>
 
               {/* Services Summary Cards */}
-              <div className="grid grid-cols-2 gap-4">
-                {['All Events', 'Makeover', 'Bridal', 'Festivals'].map((service) => (
+              <div className="grid grid-cols-2 gap-2 lg:gap-4">
+                {['Bridal', 'All Events', 'Makeover', 'Festivals'].map((service) => (
                   <div 
                     key={service} 
-                    className="flex items-center gap-3 p-4 bg-foreground/5 rounded-2xl border border-transparent  hover:bg-neutral-800 hover:shadow-xl transition-all duration-500 group"
+                    className="flex items-center  gap-2 lg:gap-3 p-2 lg:p-4 bg-foreground/5 rounded-2xl border border-transparent hover:bg-neutral-800 transition-all duration-500 group"
                   >
-                    <div className="w-2 h-2 rounded-full bg-primary"></div>
-                    <span className="text-sm font-semibold tracking-wide group-hover:text-primary transition-colors">{service}</span>
+                    <div className="w-1.5 h-1.5 lg:w-2 lg:h-2 rounded-full bg-primary"></div>
+                    <span className="text-md lg:text-md font-semibold tracking-wide group-hover:text-primary transition-colors">{service}</span>
                   </div>
                 ))}
               </div>
 
               {/* Contact & CTA Buttons */}
-              <div className="flex flex-wrap gap-4 pt-4">
+              <div className="flex  gap-3 pt-2 lg:pt-4">
                 <a 
                   href="https://wa.me/917070217738" 
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-10 flex items-center gap-2 py-4 bg-[#c21385] text-white rounded-full text-sm font-bold uppercase tracking-widest transition-all shadow-xl shadow-[#c21385]/20 hover:-translate-y-1"
+                  className="px-6 text-[10px] md:text-sm lg:text-sm lg:px-10 flex items-center gap-2 py-3 lg:py-4 bg-[#c21385] text-white rounded-full   font-bold uppercase tracking-widest transition-all shadow-xl shadow-[#c21385]/20 hover:-translate-y-1"
                 >
-                  <WhatsAppIcon size={18} /> chat with me
+                  <WhatsAppIcon size={16} /> chat with me
                 </a>
                 <a 
                   href="#contact" 
-                  className="px-10 flex items-center gap-2 py-4 border border-foreground/20 rounded-full text-sm font-bold uppercase tracking-widest hover:bg-[#c21385] hover:text-white transition-all hover:border-[#c21385] hover:-translate-y-1"
+                  className="px-6 lg:px-10 flex items-center gap-2 py-3 lg:py-4 border border-foreground/20 rounded-full text-xs lg:text-sm font-bold uppercase tracking-widest hover:bg-[#c21385] hover:text-white transition-all hover:border-[#c21385] hover:-translate-y-1"
                 >
-                  <Phone size={18} /> Contact Me
+                  <Phone size={16} /> Contact Me
                 </a>
               </div>
             </div>
             
             {/* Right: Profile Image & Creative Layout */}
-            <div className="relative group order-1 lg:order-2">
-              <div className="relative z-10 overflow-hidden rounded-[2.5rem] aspect-[4/5] shadow-2xl transition-transform duration-700 group-hover:scale-[1.01]">
+            <div className="relative group order-1 lg:order-2 w-full max-w-[200px] lg:max-w-none mx-auto lg:mx-0">
+              <div className="relative z-10 overflow-hidden rounded-[2rem] lg:rounded-[2.5rem] aspect-square lg:aspect-[4/5] shadow-2xl transition-transform duration-700 group-hover:scale-[1.01]">
                 <Image
                   src="/images/profile.png"
                   alt="Pooja Kumari - Professional Makeup Artist"
@@ -111,18 +111,9 @@ export default function Home() {
                   className="object-cover scale-x-[-1] transition-transform duration-1000 group-hover:scale-[1.05] group-hover:scale-x-[-1]"
                   priority
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity"></div>
                 
                 {/* Floating Badge */}
-                <div className="absolute bottom-8 left-8 right-8 bg-white/10 backdrop-blur-xl border border-white/20 p-5 rounded-2xl flex justify-between items-center text-white shadow-2xl">
-                  <div>
-                    <p className="text-xs uppercase tracking-widest opacity-80 mb-1">Experience</p>
-                    <p className="text-xl font-serif font-bold">8+ Years</p>
-                  </div>
-                  <div className="flex gap-1.5 text-yellow-400">
-                    {[1, 2, 3, 4, 5].map((s) => <Star key={s} size={18} fill="currentColor" />)}
-                  </div>
-                </div>
+               
               </div>
               
               {/* Background Frames */}
@@ -143,7 +134,7 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center mb-32">
-            <div className="relative order-2 lg:order-1">
+            <div className="relative order-1">
               <div className="relative z-10 rounded-[3rem] overflow-hidden aspect-square shadow-2xl group">
                 <Image 
                   src="/images/about.png" 
@@ -155,7 +146,7 @@ export default function Home() {
               <div className="absolute -bottom-8 -left-8 w-1/2 h-1/2 bg-secondary/50 rounded-[3rem] -z-10"></div>
             </div>
 
-            <div className="flex flex-col space-y-10 order-1 lg:order-2">
+            <div className="flex flex-col space-y-10 order-2">
               <h3 className="text-4xl font-serif font-bold text-foreground">Meet Pooja Kumari</h3>
               <div className="space-y-6">
                 <p className="text-xl text-foreground/80 leading-relaxed font-light">
@@ -212,9 +203,9 @@ export default function Home() {
       </section>
 
       {/* GALLERY SECTION */}
-      <section id="gallery" className="py-32">
+      <section id="gallery" className="py-16 md:py-32">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-24">
+          <div className="text-center mb-12 md:mb-24">
             <p className="uppercase tracking-[0.4em] text-xs font-semibold text-primary mb-4">Portfolio</p>
             <h2 className="text-5xl md:text-7xl font-serif font-bold text-foreground mb-8">The Gallery</h2>
             <div className="w-24 h-px bg-primary mx-auto mb-8"></div>
@@ -223,7 +214,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10">
             {[
               { src: "/images/gallery1.png", title: "Bridal Radiance", category: "Bridal" },
               { src: "/images/gallery2.png", title: "Editorial Edge", category: "Fashion" },
@@ -236,7 +227,7 @@ export default function Home() {
             ].map((img, idx) => (
               <div 
                 key={idx} 
-                className="relative group overflow-hidden rounded-[3rem] aspect-[3/4] shadow-xl hover:shadow-2xl transition-all duration-500 cursor-pointer"
+                className="relative group overflow-hidden rounded-[2rem] md:rounded-[3rem] aspect-[3/4] shadow-xl hover:shadow-2xl transition-all duration-500 cursor-pointer"
               >
                 <Image 
                   src={img.src} 
@@ -246,17 +237,7 @@ export default function Home() {
                 />
                 
                 {/* Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-700 flex flex-col justify-end p-12 text-left">
-                  <p className="text-xs uppercase tracking-[0.3em] text-primary font-bold mb-3">
-                    {img.category}
-                  </p>
-                  <h3 className="text-3xl font-serif font-bold text-white mb-6">
-                    {img.title}
-                  </h3>
-                  <div className="w-12 h-12 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center text-white border border-white/20 hover:bg-white hover:text-black transition-all">
-                    <Camera size={20} />
-                  </div>
-                </div>
+              
               </div>
             ))}
           </div>
