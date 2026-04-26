@@ -17,9 +17,9 @@ const Header = () => {
 
   return (
     <header 
-      className="fixed top-0 left-0 right-0 z-50 transition-all duration-500 py-6 bg-transparent"
+      className="fixed top-0 left-0 right-0 z-50 transition-all duration-500 py-6 bg-neutral-900"
     >
-      <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
+      <div className="max-w-7xl mx-auto px-6 flex justify-between items-center ">
         <Link href="/" className="group">
           <h1 className="text-2xl font-serif font-bold tracking-widest text-foreground group-hover:text-primary transition-colors">
             <span className="font-light text-pink-500">Makeupt</span> Darbhanga

@@ -125,6 +125,49 @@ export default function Home() {
       </section>
 
       {/* ABOUT SECTION */}
+      
+
+      {/* GALLERY SECTION */}
+      <section id="gallery" className="py-16 md:py-32">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-12 md:mb-24">
+            <p className="uppercase tracking-[0.4em] text-xs font-semibold text-primary mb-4">Portfolio</p>
+            <h2 className="text-5xl md:text-7xl font-serif font-bold text-foreground mb-8">The Gallery</h2>
+            <div className="w-24 h-px bg-primary mx-auto mb-8"></div>
+            <p className="text-xl text-foreground/60 font-light max-w-2xl mx-auto">
+              A collection of makeups done by Pooja Kumari.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10">
+            {[
+              { src: "/images/gallery1.png", title: "Bridal Radiance", category: "Bridal" },
+              { src: "/images/gallery2.png", title: "Editorial Edge", category: "Fashion" },
+              { src: "/images/gallery3.png", title: "Evening Glow", category: "Events" },
+              
+
+              { src: "/images/gallery4.png", title: "Timeless Beauty", category: "Classic" },
+              { src: "/images/gallery5.png", title: "Avant-Garde Art", category: "Creative" },
+              { src: "/images/gallery6.png", title: "Clean Aesthetic", category: "Natural" },
+            ].map((img, idx) => (
+              <div 
+                key={idx} 
+                className="relative group overflow-hidden rounded-[2rem] md:rounded-[3rem] aspect-[3/4] shadow-xl hover:shadow-2xl transition-all duration-500 cursor-pointer"
+              >
+                <Image 
+                  src={img.src} 
+                  alt={img.title} 
+                  fill 
+                  className="object-cover transition-transform duration-1000 group-hover:scale-110"
+                />
+                
+                {/* Overlay */}
+              
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
       <section id="about" className="py-32 bg-foreground/[0.02]">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-24">
@@ -196,48 +239,6 @@ export default function Home() {
                 <p className="text-foreground/70 group-hover:text-white/80 font-light leading-relaxed transition-colors">
                   {item.desc}
                 </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* GALLERY SECTION */}
-      <section id="gallery" className="py-16 md:py-32">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-12 md:mb-24">
-            <p className="uppercase tracking-[0.4em] text-xs font-semibold text-primary mb-4">Portfolio</p>
-            <h2 className="text-5xl md:text-7xl font-serif font-bold text-foreground mb-8">The Gallery</h2>
-            <div className="w-24 h-px bg-primary mx-auto mb-8"></div>
-            <p className="text-xl text-foreground/60 font-light max-w-2xl mx-auto">
-              A curated collection of beauty transformations, from timeless bridal elegance to high-fashion editorial artistry.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10">
-            {[
-              { src: "/images/gallery1.png", title: "Bridal Radiance", category: "Bridal" },
-              { src: "/images/gallery2.png", title: "Editorial Edge", category: "Fashion" },
-              { src: "/images/gallery3.png", title: "Evening Glow", category: "Events" },
-              
-
-              { src: "/images/gallery4.png", title: "Timeless Beauty", category: "Classic" },
-              { src: "/images/gallery5.png", title: "Avant-Garde Art", category: "Creative" },
-              { src: "/images/gallery6.png", title: "Clean Aesthetic", category: "Natural" },
-            ].map((img, idx) => (
-              <div 
-                key={idx} 
-                className="relative group overflow-hidden rounded-[2rem] md:rounded-[3rem] aspect-[3/4] shadow-xl hover:shadow-2xl transition-all duration-500 cursor-pointer"
-              >
-                <Image 
-                  src={img.src} 
-                  alt={img.title} 
-                  fill 
-                  className="object-cover transition-transform duration-1000 group-hover:scale-110"
-                />
-                
-                {/* Overlay */}
-              
               </div>
             ))}
           </div>
